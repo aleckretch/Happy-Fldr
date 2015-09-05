@@ -10,4 +10,8 @@
 
 @interface AlbumViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UIButton *backToMainBtn;
+
+- (IBAction) onTapBackToMainButton:(id)sender;
+
 @end

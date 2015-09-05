@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FullImageViewController.h"
 
-@interface AlbumCollectionViewController : UICollectionViewController
+@interface AlbumCollectionViewController : UICollectionViewController <FullImageViewControllerDelegate>
+
+@property (retain, nonatomic) IBOutlet UILabel *labelPhotoCount;
+@property (nonatomic, strong) NSCache *cacheThumbnailImage;
+@property (retain, nonatomic) NSArray *arrayThumbnails;
+@property (nonatomic, assign) BOOL viewFirstOpened;
+@property (nonatomic, assign) int highestNumber;
+@property (nonatomic, assign) int lowestNumber;
+@property (nonatomic, assign) int imageCount;
 
 @end
